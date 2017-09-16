@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+<!-- This is the page title -->
+{% block title %}This is the index{% endblock %}
+
+<!-- This is where we put the nav bar urls -->
+{% block nav_links %}
+    <li><a href="#">To no Where</a> </li>
+    <li><a href="#">To some where</a> </li>
+{% endblock %}
+
+<!-- This is where the main content of the page goes -->
+{% block content %}
+    <h2>Welcome to your app</h2>
+    <hr>
+    <br><br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="datagrid">
+                <table class="table table-responsive table-hover">
+                    <thead>
+                        <tr>
+                            <th><strong>Restaurant ID</strong></th>
+                            <th><strong>Name</strong></th>
+                            <th><strong>Address</strong></th>
+                        </tr>
+                    </thead>
+                    {% for restaurant in restaurants %}
+                        <tr>
+                            <td>{{ restaurant['Restaurant ID'] }}</td>
+                            <td>{{ restaurant['Name'] }}</td>
+                            <td>{{ restaurant['Address'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
