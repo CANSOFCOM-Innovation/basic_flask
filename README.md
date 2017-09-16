@@ -19,6 +19,7 @@ virtualenv --python=python venv
 ```
 If windows ``` ./venv/scripts/activate```
 If linux or MAC ``` source venv/bin/activate```
+
 ```pip install -r requirements.txt```
 
 Start the app
